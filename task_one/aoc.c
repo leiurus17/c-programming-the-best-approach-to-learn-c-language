@@ -19,5 +19,15 @@ void main () {
     total_area = find_area(start_point, end_point, numtraps);
 
     printf("The total area is %f", total_area);
+}
 
+void input(void) {
+    printf("Enter the lower limit");
+    scanf("%f", & start_point);
+
+    printf("Enter the upper limit");
+    scanf("%f", & end_point);
+
+    printf("Enter the number of trapezoids");
+    scanf("%d", & numtraps);
 }
