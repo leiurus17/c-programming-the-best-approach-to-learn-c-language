@@ -31,3 +31,20 @@ void input(void) {
     printf("Enter the number of trapezoids");
     scanf("%d", & numtraps);
 }
+
+float find_area(float a, float b, int n) {
+    float width;
+    float h1;
+    float h2;
+    float lower;
+
+    float function_x(float x);
+    float trap_area(float h1, float h2, float width);
+
+    width = (b - a) / n;
+    lower = a;
+
+    for (lower = a; lower <= b - width; lower++) {
+        
+    }
+}
