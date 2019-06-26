@@ -13,7 +13,7 @@ void main () {
     void input(void);
     float find_area(float a, float b, int n);
 
-    printf("AREA UNDER THE CURVE");
+    printf("AREA UNDER THE CURVE\n\n");
 
     input();
     total_area = find_area(start_point, end_point, numtraps);
@@ -22,13 +22,13 @@ void main () {
 }
 
 void input(void) {
-    printf("Enter the lower limit");
+    printf("Enter the lower limit: ");
     scanf("%f", & start_point);
 
-    printf("Enter the upper limit");
+    printf("Enter the upper limit: ");
     scanf("%f", & end_point);
 
-    printf("Enter the number of trapezoids");
+    printf("Enter the number of trapezoids: ");
     scanf("%d", & numtraps);
 }
 
@@ -37,6 +37,7 @@ float find_area(float a, float b, int n) {
     float h1;
     float h2;
     float lower;
+    float base;
 
     float function_x(float x);
     float trap_area(float h1, float h2, float width);
@@ -45,6 +46,20 @@ float find_area(float a, float b, int n) {
     lower = a;
 
     for (lower = a; lower <= b - width; lower++) {
-        
+        h1 = function_x(lower);
+        h2 = function_x(lower + base);
+
+        total_area += trap_area(h1 , h2, width);
     }
+
+    return(total_area);
+}
+
+float trap_area(float h1, float h2, float base) {
+    float area;
+    area = 0.5 * (h1 + h2) * base;
+}
+
+float function_x(float x) {
+    return(x * x + 1);
 }
