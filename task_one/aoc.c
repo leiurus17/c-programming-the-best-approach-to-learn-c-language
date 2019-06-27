@@ -33,33 +33,34 @@ void input(void) {
 }
 
 float find_area(float a, float b, int n) {
-    float width;
+    //float width;
     float h1;
     float h2;
     float lower;
     float base;
 
     float function_x(float x);
-    float trap_area(float h1, float h2, float width);
+    float trap_area(float h1, float h2, float base);
 
-    width = (b - a) / n;
+    base = (b - 1) / n;
     lower = a;
 
-    for (lower = a; lower <= b - width; lower++) {
+    for (lower = a; lower <= b - base; lower = lower + base) {
         h1 = function_x(lower);
         h2 = function_x(lower + base);
 
-        total_area += trap_area(h1 , h2, width);
+        total_area += trap_area(h1 , h2, base);
     }
 
-    return(total_area);
+    return (total_area);
 }
 
 float trap_area(float h1, float h2, float base) {
     float area;
     area = 0.5 * (h1 + h2) * base;
+    return (area);
 }
 
 float function_x(float x) {
-    return(x * x + 1);
+    return (x * x + 1);
 }
