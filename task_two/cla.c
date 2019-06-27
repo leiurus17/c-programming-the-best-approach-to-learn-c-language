@@ -14,4 +14,6 @@ void main(int argc, char* argv[]) {
         
         fprintf(fp, "%s", argv[i]);
     }
+
+    fclose(fp);
 }
