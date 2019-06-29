@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 
     FILE *fp;
     int i;
@@ -32,4 +32,6 @@ void main(int argc, char* argv[]) {
     }
 
     fclose(fp); //do not forget to close the file
+
+    return (0);
 }

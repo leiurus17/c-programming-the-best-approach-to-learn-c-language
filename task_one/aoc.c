@@ -8,7 +8,7 @@ float total_area;
 
 int numtraps;
 
-void main () {
+int main () {
 
     void input(void);
     float find_area(float a, float b, int n);
@@ -19,6 +19,8 @@ void main () {
     total_area = find_area(start_point, end_point, numtraps);
 
     printf("The total area is %f", total_area);
+
+    return (0);
 }
 
 void input(void) {
