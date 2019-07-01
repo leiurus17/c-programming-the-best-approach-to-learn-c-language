@@ -7,7 +7,19 @@ int main() {
 
     int *p; // pointer
 
-    printf("%d", p);
+    printf("Zero: %d\n", *p);
+
+    printf("First: %d\n", p); // What is this value?
+
+    p = & item;
+
+    printf("Second: %d\n", p);
+
+    printf("Third: %d\n", n);
+
+    n = *p;
+
+    printf("Fourth: %d\n", n);
 
     return(0);
 }
