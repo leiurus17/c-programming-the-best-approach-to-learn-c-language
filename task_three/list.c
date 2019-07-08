@@ -41,7 +41,17 @@ int main () {
     return(0);
 }
 
-void create(node *p) {
+void create(node *list) {
+    printf("input a number : \n");
+    printf("type -999 at the end");
+    scanf("%d", list -> number);
+
+    if (list -> number == -999) {
+        list -> next = NULL;
+    } else {
+        list -> next = (node *) malloc(sizeof(node));
+        create(list -> next);
+    }
 }
 
 node insert(node *p, int n) {
