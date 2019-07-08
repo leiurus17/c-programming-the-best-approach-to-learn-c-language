@@ -57,5 +57,9 @@ void create(node *list) {
 node insert(node *p, int n) {
 }
 
-void print(node *p) {
+void print(node *list) {
+    while(list -> next != 0) {
+        printf("%d", list -> number);
+        list = list -> next;
+    }
 }
